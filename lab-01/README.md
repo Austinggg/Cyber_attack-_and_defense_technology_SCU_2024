@@ -12,7 +12,7 @@
 ### 确定基本请求 URL
 
 1. 使用 site: 命令在百度搜索引擎中搜索子域名，例如：site:qq.com
-![alt text](image.png)
+![alt text](./assets/image.png)
 
 2. 在网址栏复制百度查找目标域名下的子域名的搜索语法
 
@@ -67,10 +67,10 @@ headers = {
 > 百度的搜索结果链接可能是跳转链接，需要额外处理来获取真实的 URL：
 
 6. 利用检查功能，查看搜索结果中的真实域名.
-![alt text](image-3.png)
+![alt text](./assets/image-3.png)
 
 7. 我们可以看到，百度搜索引擎的搜索结果中，真实域名被百度搜索引擎的域名跳转链接所替代，真实的域名藏在 `class` 为 `'result'` 的 `<div>` 标签 后的 `'mu'`属性后。
-![alt text](image-5.png)
+![alt text](./assets/image-5.png)
 
 8. 在提供的示例代码中添加过滤功能后，即可提取出真实域名。
 
@@ -151,7 +151,7 @@ while page_num < max_pages:
 
 12. 在刚才打开的检查窗口查看该域名的描述信息。
 
-![alt text](image-6.png)
+![alt text](./assets/image-6.png)
 
 13.  在代码中添加获取描述信息的部分，可以看到 `title` 信息放在 `<h3>` 标签中。
 
@@ -274,17 +274,17 @@ baidu_search('qq.com', 100)
 
 > 此处的运行结果过长，截取部分作为展示
 
-![alt text](image-4.png)
+![alt text](./assets/image-4.png)
 
 ## 实验过程问题总结
 
 1. 与 bing 不同，百度采用的是跳转链接，因此我们需要重新观察页面代码，找到真正的域名的链接，不能使用相同的方法进行爬取。若采用相同的方法，则只会出现下面的6个域名:
 
-![alt text](image-7.png)
+![alt text](./assets/image-7.png)
 
 2. 在程序运行后，立即重新运行，会出现找不到子域名的情况，是因为频繁访问，被百度限制访问，即使我增设了延时功能，但仍不能解决该问题。考虑采用代理 ip 池来解决问题。
 
-![alt text](image-8.png)
+![alt text](./assets/image-8.png)
 
 ## 参考资料
 
